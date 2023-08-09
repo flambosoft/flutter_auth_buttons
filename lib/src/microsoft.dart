@@ -4,11 +4,11 @@ import 'package:flutter_auth_buttons/src/button.dart';
 /// A sign in button that matches Microsoft's design guidelines.
 class MicrosoftSignInButton extends StatelessWidget {
   final String text;
-  final TextStyle textStyle;
-  final VoidCallback onPressed;
+  final TextStyle? textStyle;
+  final VoidCallback? onPressed;
   final double borderRadius;
   final bool darkMode;
-  final Color splashColor;
+  final Color? splashColor;
   final bool centered;
 
   /// Creates a new button. The default button text is 'Sign in with Microsoft'.
@@ -21,7 +21,7 @@ class MicrosoftSignInButton extends StatelessWidget {
     this.darkMode = false,
     this.splashColor,
     this.centered = false,
-    Key key,
+    Key? key,
   })  : assert(text != null),
         super(key: key);
 

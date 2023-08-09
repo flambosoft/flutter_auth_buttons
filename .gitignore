@@ -3,6 +3,8 @@
 .packages
 .pub/
 build/
+.fvm
+.idea
 ios/.generated/
 ios/Flutter/Generated.xcconfig
 ios/Runner/GeneratedPluginRegistrant.*

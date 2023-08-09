@@ -71,9 +71,9 @@ void main() {
     );
 
     var text = find.byType(Text).evaluate().toList()[0].widget as Text;
-    expect(text.style.fontSize, defaultTextStyle.fontSize);
-    expect(text.style.fontWeight, defaultTextStyle.fontWeight);
-    expect(text.style.color, defaultTextStyle.color);
+    expect(text.style!.fontSize, defaultTextStyle.fontSize);
+    expect(text.style!.fontWeight, defaultTextStyle.fontWeight);
+    expect(text.style!.color, defaultTextStyle.color);
   });
 
   testWidgets('Check the provided text style of the button is used',
@@ -119,7 +119,7 @@ void main() {
 
   testWidgets('Check default splash color is used',
       (WidgetTester tester) async {
-    ButtonThemeData buttonTheme;
+    late ButtonThemeData buttonTheme;
 
     await tester.pumpWidget(MaterialApp(
       home: Builder(

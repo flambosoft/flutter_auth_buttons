@@ -76,7 +76,7 @@ void main() {
     expect(button.color, Color(0xFF4285F4));
 
     var text = find.byType(Text).evaluate().toList()[0].widget as Text;
-    expect(text.style.color, Colors.white);
+    expect(text.style!.color, Colors.white);
   });
 
   testWidgets('Check light mode works', (WidgetTester tester) async {
@@ -98,7 +98,7 @@ void main() {
     expect(button.color, Colors.white);
 
     var text = find.byType(Text).evaluate().toList()[0].widget as Text;
-    expect(text.style.color, Colors.black.withOpacity(0.54));
+    expect(text.style!.color, Colors.black.withOpacity(0.54));
   });
 
   testWidgets('Check default text style is used', (WidgetTester tester) async {
@@ -119,9 +119,9 @@ void main() {
     );
 
     var text = find.byType(Text).evaluate().toList()[0].widget as Text;
-    expect(text.style.fontSize, defaultTextStyle.fontSize);
-    expect(text.style.fontWeight, defaultTextStyle.fontWeight);
-    expect(text.style.color, defaultTextStyle.color);
+    expect(text.style!.fontSize, defaultTextStyle.fontSize);
+    expect(text.style!.fontWeight, defaultTextStyle.fontWeight);
+    expect(text.style!.color, defaultTextStyle.color);
   });
 
   testWidgets('Check supplied text style is used', (WidgetTester tester) async {
@@ -169,7 +169,7 @@ void main() {
 
   testWidgets('Check default splash color is used',
       (WidgetTester tester) async {
-    ButtonThemeData buttonTheme;
+    late ButtonThemeData buttonTheme;
 
     await tester.pumpWidget(MaterialApp(
       home: Builder(
