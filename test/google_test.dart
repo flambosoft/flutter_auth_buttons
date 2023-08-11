@@ -69,10 +69,10 @@ void main() {
       ),
     );
 
-    expect(find.byType(RaisedButton), findsOneWidget);
+    expect(find.byType(ElevatedButton), findsOneWidget);
 
-    var button =
-        find.byType(RaisedButton).evaluate().toList()[0].widget as RaisedButton;
+    var button = find.byType(ElevatedButton).evaluate().toList()[0].widget
+        as ElevatedButton;
     expect(button.color, Color(0xFF4285F4));
 
     var text = find.byType(Text).evaluate().toList()[0].widget as Text;
@@ -90,10 +90,10 @@ void main() {
       ),
     );
 
-    expect(find.byType(RaisedButton), findsOneWidget);
+    expect(find.byType(ElevatedButton), findsOneWidget);
 
-    var button =
-        find.byType(RaisedButton).evaluate().toList()[0].widget as RaisedButton;
+    var button = find.byType(ElevatedButton).evaluate().toList()[0].widget
+        as ElevatedButton;
 
     expect(button.color, Colors.white);
 
@@ -182,8 +182,8 @@ void main() {
       ),
     ));
 
-    var button =
-        find.byType(RaisedButton).evaluate().toList()[0].widget as RaisedButton;
+    var button = find.byType(ElevatedButton).evaluate().toList()[0].widget
+        as ElevatedButton;
     expect(buttonTheme.getSplashColor(button),
         buttonTheme.getTextColor(button).withOpacity(0.12));
   });

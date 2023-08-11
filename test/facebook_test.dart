@@ -135,8 +135,8 @@ void main() {
       ),
     ));
 
-    var button =
-        find.byType(RaisedButton).evaluate().toList()[0].widget as RaisedButton;
+    var button = find.byType(ElevatedButton).evaluate().toList()[0].widget
+        as ElevatedButton;
     expect(buttonTheme.getSplashColor(button),
         buttonTheme.getTextColor(button).withOpacity(0.12));
   });
