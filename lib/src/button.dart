@@ -56,8 +56,8 @@ class StretchableButton extends StatelessWidget {
           child: ElevatedButton(
             onPressed: onPressed,
             style: ElevatedButton.styleFrom(
-              primary: buttonColor,
-              onPrimary: splashColor,
+              backgroundColor: buttonColor,
+              foregroundColor: splashColor,
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
